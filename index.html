@@ -90,6 +90,14 @@ header{position:sticky;top:0;z-index:50;background:rgba(244,241,233,.92);backdro
 .cat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .cat-count{position:absolute;bottom:10px;right:12px;font-size:.68rem;font-weight:700;letter-spacing:.08em;color:#fff;background:rgba(36,27,19,.65);padding:3px 9px;border-radius:4px}
 
+/* ---------- manufacturers ---------- */
+.manufacturers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.manufacturer{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
+.manufacturer h3{font-size:1.15rem;margin-bottom:16px}
+.manufacturer .catalogs{display:flex;flex-wrap:wrap;gap:10px}
+.manufacturer .catalogs a{font-size:.85rem;font-weight:600;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;transition:background .15s ease,border-color .15s ease,color .15s ease}
+.manufacturer .catalogs a:hover{background:var(--brass);border-color:var(--brass);color:#fff}
+
 /* ---------- lightbox ---------- */
 .lightbox{position:fixed;inset:0;background:rgba(20,15,10,.94);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:100;padding:20px}
 .lightbox.open{display:flex}
@@ -152,6 +160,7 @@ footer .social a:hover{color:var(--brass-light)}
         <li><a href="#inicio" data-i18n="nav_home"></a></li>
         <li><a href="#servicios" data-i18n="nav_services"></a></li>
         <li><a href="#coleccion" data-i18n="nav_collection"></a></li>
+        <li><a href="#fabricantes" data-i18n="nav_manufacturers"></a></li>
         <li><a href="#contacto" data-i18n="nav_contact"></a></li>
         <li>
           <div class="lang-toggle" role="group" aria-label="Idioma">
@@ -250,6 +259,46 @@ footer .social a:hover{color:var(--brass-light)}
   </div>
 </section>
 
+<section class="section" id="fabricantes">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="man_eyebrow"></div>
+      <h2 data-i18n="man_title"></h2>
+      <p data-i18n="man_sub"></p>
+    </div>
+    <div class="manufacturers-grid">
+      <div class="manufacturer">
+        <h3>Nordic Home</h3>
+        <div class="catalogs">
+          <a href="https://example.com/nordic-home/catalogo-2026" target="_blank" rel="noopener">Catálogo 2026</a>
+          <a href="https://example.com/nordic-home/catalogo-exterior" target="_blank" rel="noopener">Catálogo Exterior</a>
+        </div>
+      </div>
+      <div class="manufacturer">
+        <h3>Maderas del Sur</h3>
+        <div class="catalogs">
+          <a href="https://example.com/maderas-del-sur/catalogo-macizo" target="_blank" rel="noopener">Catálogo Macizo</a>
+          <a href="https://example.com/maderas-del-sur/catalogo-forja" target="_blank" rel="noopener">Catálogo Forja</a>
+        </div>
+      </div>
+      <div class="manufacturer">
+        <h3>ColchónPlus</h3>
+        <div class="catalogs">
+          <a href="https://example.com/colchonplus/catalogo-colchones" target="_blank" rel="noopener">Catálogo Colchones</a>
+          <a href="https://example.com/colchonplus/catalogo-somieres" target="_blank" rel="noopener">Catálogo Somieres</a>
+        </div>
+      </div>
+      <div class="manufacturer">
+        <h3>Estudio Contemporáneo</h3>
+        <div class="catalogs">
+          <a href="https://example.com/estudio-contemporaneo/catalogo-salon" target="_blank" rel="noopener">Catálogo Salón</a>
+          <a href="https://example.com/estudio-contemporaneo/catalogo-despacho" target="_blank" rel="noopener">Catálogo Despacho</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="contacto">
   <div class="container">
     <div class="section-head">
@@ -308,7 +357,7 @@ footer .social a:hover{color:var(--brass-light)}
 <script>
 const i18n = {
   es: {
-    nav_home:"Inicio", nav_services:"Servicios", nav_collection:"Colección", nav_contact:"Contacto",
+    nav_home:"Inicio", nav_services:"Servicios", nav_collection:"Colección", nav_manufacturers:"Fabricantes", nav_contact:"Contacto",
     hero_title:"Cincuenta años <em>amueblando hogares</em> en Tarragona",
     hero_sub:"Desde 1976 nos dedicamos a la venta e instalación de todo tipo de muebles, colchones y sofás, destacando en calidad, profesionalidad y buen precio.",
     hero_cta1:"Ver la colección", hero_cta2:"Visítanos",
@@ -331,10 +380,11 @@ const i18n = {
     f_name:"Nombre", f_msg:"Mensaje", f_send:"Enviar mensaje",
     foot:"Muebles, colchones y sofás desde 1976",
     cats:["Dormitorio moderno","Dormitorio juvenil","Comedor moderno","Mesas y sillas","Sofás","Mueble auxiliar","Mueble macizo y forja","Recibidor moderno","Vestidores","Cuadros","Estudio y despacho","Colchones","Somieres"],
-    pending:"Foto pendiente"
+    pending:"Foto pendiente",
+    man_eyebrow:"Fabricantes", man_title:"Nuestros Fabricantes", man_sub:"Trabajamos con más de 200 fabricantes nacionales. Consulte sus catálogos completos."
   },
   ca: {
-    nav_home:"Inici", nav_services:"Serveis", nav_collection:"Col·lecció", nav_contact:"Contacte",
+    nav_home:"Inici", nav_services:"Serveis", nav_collection:"Col·lecció", nav_manufacturers:"Fabricants", nav_contact:"Contacte",
     hero_title:"Cinquanta anys <em>moblant llars</em> a Tarragona",
     hero_sub:"Des de 1976 ens dediquem a la venda i instal·lació de tota mena de mobles, matalassos i sofàs, destacant en qualitat, professionalitat i bon preu.",
     hero_cta1:"Veure la col·lecció", hero_cta2:"Visita'ns",
@@ -357,7 +407,8 @@ const i18n = {
     f_name:"Nom", f_msg:"Missatge", f_send:"Envia el missatge",
     foot:"Mobles, matalassos i sofàs des de 1976",
     cats:["Dormitori modern","Dormitori juvenil","Menjador modern","Taules i cadires","Sofàs","Moble auxiliar","Moble massís i forja","Rebedor modern","Vestidors","Quadres","Estudi i despatx","Matalassos","Somiers"],
-    pending:"Foto pendent"
+    pending:"Foto pendent",
+    man_eyebrow:"Fabricants", man_title:"Els Nostres Fabricants", man_sub:"Treballem amb més de 200 fabricants nacionals. Consulteu els seus catàlegs complets."
   }
 };
 
