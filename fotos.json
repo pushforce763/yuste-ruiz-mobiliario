@@ -12,7 +12,9 @@
   "mesas-sillas": [],
   "mueble-auxiliar": [],
   "recibidor-moderno": [],
-  "sofas": [],
+  "sofas": [
+    "01-test.png"
+  ],
   "somieres": [],
   "vestidores": []
 }
