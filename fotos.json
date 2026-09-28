@@ -4,7 +4,12 @@
     "02-colchones.jpeg",
     "03-colchones.jpeg"
   ],
-  "comedor-moderno": [],
+  "comedor-moderno": [
+    "01-comedor-moderno.jpeg",
+    "02-comedor-moderno.jpeg",
+    "03-comedor-moderno.jpeg",
+    "04-comedor-moderno.jpeg"
+  ],
   "dormitorio-juvenil": [
     "01-dormitorio-juvenil.jpeg"
   ],
@@ -14,10 +19,18 @@
   "estudio-despacho": [
     "01-estudio-despacho.jpeg"
   ],
-  "mesas-sillas": [],
+  "mesas-sillas": [
+    "01-mesas-sillas.jpeg",
+    "02-mesas-sillas.jpeg"
+  ],
   "mueble-auxiliar": [],
   "recibidor-moderno": [],
-  "sofas": [],
+  "sofas": [
+    "01-sofas.jpeg",
+    "02-sofas.jpeg",
+    "03-sofas.jpeg",
+    "04-sofas.jpeg"
+  ],
   "somieres": [],
   "vestidores": [
     "01-vestidores.jpeg"
