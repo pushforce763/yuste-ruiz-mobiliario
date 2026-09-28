@@ -8,17 +8,16 @@ Cada categoría de la colección tiene su carpeta en `fotos/`:
 
 ```
 fotos/
-├── dormitorio-moderno/
+├── dormitorio/
 ├── dormitorio-juvenil/
-├── comedor-moderno/
+├── comedor/
 ├── mesas-sillas/
 ├── sofas/
-├── mueble-auxiliar/
-├── recibidor-moderno/
+├── recibidor/
 ├── vestidores/
 ├── estudio-despacho/
 ├── colchones/
-└── somieres/
+└── bases-canapes/
 ```
 
 **Para añadir fotos**: sube las imágenes (jpg, png, webp, avif) a la carpeta

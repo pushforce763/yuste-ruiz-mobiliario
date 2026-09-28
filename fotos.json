@@ -1,20 +1,23 @@
 {
+  "bases-canapes": [
+    "01-bases-canapes.jpeg"
+  ],
   "colchones": [
     "01-colchones.jpeg",
     "02-colchones.jpeg",
     "03-colchones.jpeg"
   ],
-  "comedor-moderno": [
-    "01-comedor-moderno.jpeg",
-    "02-comedor-moderno.jpeg",
-    "03-comedor-moderno.jpeg",
-    "04-comedor-moderno.jpeg"
+  "comedor": [
+    "01-comedor.jpeg",
+    "02-comedor.jpeg",
+    "03-comedor.jpeg",
+    "04-comedor.jpeg"
+  ],
+  "dormitorio": [
+    "01-dormitorio.jpeg"
   ],
   "dormitorio-juvenil": [
     "01-dormitorio-juvenil.jpeg"
-  ],
-  "dormitorio-moderno": [
-    "01-dormitorio-moderno.jpeg"
   ],
   "estudio-despacho": [
     "01-estudio-despacho.jpeg"
@@ -23,15 +26,16 @@
     "01-mesas-sillas.jpeg",
     "02-mesas-sillas.jpeg"
   ],
-  "mueble-auxiliar": [],
-  "recibidor-moderno": [],
+  "recibidor": [
+    "01-recibidor.jpeg",
+    "02-recibidor.jpeg"
+  ],
   "sofas": [
     "01-sofas.jpeg",
     "02-sofas.jpeg",
     "03-sofas.jpeg",
     "04-sofas.jpeg"
   ],
-  "somieres": [],
   "vestidores": [
     "01-vestidores.jpeg"
   ]
