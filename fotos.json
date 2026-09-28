@@ -1,13 +1,25 @@
 {
-  "colchones": [],
+  "colchones": [
+    "01-colchones.jpeg",
+    "02-colchones.jpeg",
+    "03-colchones.jpeg"
+  ],
   "comedor-moderno": [],
-  "dormitorio-juvenil": [],
-  "dormitorio-moderno": [],
-  "estudio-despacho": [],
+  "dormitorio-juvenil": [
+    "01-dormitorio-juvenil.jpeg"
+  ],
+  "dormitorio-moderno": [
+    "01-dormitorio-moderno.jpeg"
+  ],
+  "estudio-despacho": [
+    "01-estudio-despacho.jpeg"
+  ],
   "mesas-sillas": [],
   "mueble-auxiliar": [],
   "recibidor-moderno": [],
   "sofas": [],
   "somieres": [],
-  "vestidores": []
+  "vestidores": [
+    "01-vestidores.jpeg"
+  ]
 }
