@@ -4,12 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yuste Ruíz Mobiliario — Muebles en Tarragona desde 1976</title>
-<link rel="icon" href="img/logo.png">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta name="description" content="Yuste Ruíz Mobiliario: venta e instalación de muebles, colchones y sofás en Tarragona desde 1976. Asesoramiento y diseño gratuitos, transporte e instalación.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://yusteruizmobiliario.es/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yusteruizmobiliario.es/">
+<meta property="og:title" content="Yuste Ruíz Mobiliario — Muebles en Tarragona desde 1976">
+<meta property="og:description" content="Venta e instalación de muebles, colchones y sofás en Tarragona desde 1976. Asesoramiento y diseño gratuitos, transporte e instalación.">
+<!-- {{TODO: crear img/og.jpg (1200x630) a partir de una foto de la tienda + el logo; hasta entonces esta imagen da 404 }} -->
+<meta property="og:image" content="https://yusteruizmobiliario.es/img/og.jpg">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/karla-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/libre-caslon-text-700.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:'Karla';font-style:normal;font-weight:400 700;font-display:swap;src:url('fonts/karla-variable.woff2') format('woff2')}
+@font-face{font-family:'Libre Caslon Text';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/libre-caslon-text-400.woff2') format('woff2')}
+@font-face{font-family:'Libre Caslon Text';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/libre-caslon-text-700.woff2') format('woff2')}
+@font-face{font-family:'Libre Caslon Text';font-style:italic;font-weight:400;font-display:swap;src:url('fonts/libre-caslon-text-italic-400.woff2') format('woff2')}
 :root{
   --nogal:#5a4230;        /* walnut — dark sections, from logo wood shadow */
   --nogal-soft:#7a6248;
@@ -60,7 +74,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(244,241,233,.92);backdro
 .hero .years{display:flex;align-items:center;gap:16px;font-family:var(--display);font-size:1rem;color:var(--brass-light);letter-spacing:.08em}
 .hero .years .rule{flex:0 0 64px;height:1px;background:var(--brass)}
 .hero h1{font-size:clamp(2.2rem,5.6vw,4rem);margin:.35em 0 .45em}
-.hero h1 em{font-style:italic;color:var(--brass-light)}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--brass-light)}
 .hero p{font-size:1.12rem;color:#d9d2c4;max-width:560px}
 .hero-cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.95rem;padding:14px 28px;border-radius:99px;transition:transform .15s ease,background .15s ease}
@@ -142,19 +156,46 @@ footer .social a:hover{color:var(--brass-light)}
   html{scroll-behavior:auto}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FurnitureStore",
+  "name": "Yuste Ruíz Mobiliario",
+  "url": "https://yusteruizmobiliario.es/",
+  "logo": "https://yusteruizmobiliario.es/img/logo.png",
+  "image": "https://yusteruizmobiliario.es/img/og.jpg",
+  "telephone": "+34977546677",
+  "email": "michelyuste@gmail.com",
+  "foundingDate": "1976",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{TODO}}",
+    "postalCode": "{{TODO}}",
+    "addressLocality": "{{TODO: Tarragona?}}",
+    "addressRegion": "Tarragona",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "13:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "16:00", "closes": "20:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "13:00"}
+  ],
+  "sameAs": ["https://www.instagram.com/yuste_ruiz_mobiliario/"]
+}
+</script>
 </head>
 <body>
 
 <header>
   <div class="container nav">
-    <a class="logo" href="#inicio"><img class="logo-mark" src="img/logo.png" alt="Yuste Ruíz Mobiliario"><span>Yuste Ruíz</span> Mobiliario</a>
+    <a class="logo" href="#inicio"><img class="logo-mark" src="img/logo-76.png" width="80" height="76" alt="Yuste Ruíz Mobiliario"><span>Yuste Ruíz</span> Mobiliario</a>
     <nav>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#inicio" data-i18n="nav_home"></a></li>
-        <li><a href="#servicios" data-i18n="nav_services"></a></li>
-        <li><a href="#coleccion" data-i18n="nav_collection"></a></li>
-        <li><a href="#fabricantes" data-i18n="nav_manufacturers"></a></li>
-        <li><a href="#contacto" data-i18n="nav_contact"></a></li>
+        <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+        <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
+        <li><a href="#coleccion" data-i18n="nav_collection">Colección</a></li>
+        <li><a href="#fabricantes" data-i18n="nav_manufacturers">Fabricantes</a></li>
+        <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
         <li>
           <div class="lang-toggle" role="group" aria-label="Idioma">
             <button type="button" id="btnEs" class="active" aria-pressed="true" onclick="setLang('es')">ES</button>
@@ -186,11 +227,11 @@ footer .social a:hover{color:var(--brass-light)}
   </svg>
   <div class="container hero-inner">
     <div class="years"><span>1976</span><span class="rule" aria-hidden="true"></span><span id="yearNow">2026</span></div>
-    <h1 data-i18n-html="hero_title"></h1>
-    <p data-i18n="hero_sub"></p>
+    <h1 data-i18n-html="hero_title">Más de cincuenta años <em>amueblando hogares</em> en Tarragona</h1>
+    <p data-i18n="hero_sub">Desde 1976 nos dedicamos a la venta e instalación de todo tipo de muebles, colchones y sofás, destacando en calidad, profesionalidad y buen precio.</p>
     <div class="hero-cta">
-      <a class="btn btn-brass" href="#coleccion" data-i18n="hero_cta1"></a>
-      <a class="btn btn-ghost" href="#contacto" data-i18n="hero_cta2"></a>
+      <a class="btn btn-brass" href="#coleccion" data-i18n="hero_cta1">Ver la colección</a>
+      <a class="btn btn-ghost" href="#contacto" data-i18n="hero_cta2">Visítenos</a>
     </div>
   </div>
 </section>
@@ -198,34 +239,34 @@ footer .social a:hover{color:var(--brass-light)}
 <section class="section" id="servicios">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow" data-i18n="svc_eyebrow"></div>
-      <h2 data-i18n="svc_title"></h2>
-      <p data-i18n="svc_sub"></p>
+      <div class="eyebrow" data-i18n="svc_eyebrow">Servicios</div>
+      <h2 data-i18n="svc_title">Cuidamos del mueble</h2>
+      <p data-i18n="svc_sub">La experiencia, el servicio y la profesionalidad nos diferencian.</p>
     </div>
     <div class="services-grid">
       <div class="service">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
-        <h3 data-i18n="svc1_t"></h3><p data-i18n="svc1_p"></p>
+        <h3 data-i18n="svc1_t">Asesoramiento y diseño gratuitos</h3><p data-i18n="svc1_p">Nos desplazamos hasta su hogar, tomamos medidas y resolvemos todas sus dudas en mobiliario y decoración.</p>
       </div>
       <div class="service">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
-        <h3 data-i18n="svc2_t"></h3><p data-i18n="svc2_p"></p>
+        <h3 data-i18n="svc2_t">Una extensa red de fabricantes</h3><p data-i18n="svc2_p">Encontramos la forma de convertir sus ideas en realidad entre nuestro extenso catálogo de fabricantes nacionales.</p>
       </div>
       <div class="service">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M1 8h14v9H1zM15 11h4l3 3v3h-7M5.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM18.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/></svg>
-        <h3 data-i18n="svc3_t"></h3><p data-i18n="svc3_p"></p>
+        <h3 data-i18n="svc3_t">Transporte gratuito</h3><p data-i18n="svc3_p">Transporte extremadamente cuidadoso y gratuito hasta 25 km.</p>
       </div>
       <div class="service">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M14.7 6.3a4 4 0 0 0-5.06 5.06L3 18l3 3 6.64-6.64a4 4 0 0 0 5.06-5.06l-2.6 2.6-2.4-2.4Z"/></svg>
-        <h3 data-i18n="svc4_t"></h3><p data-i18n="svc4_p"></p>
+        <h3 data-i18n="svc4_t">Instalación profesional</h3><p data-i18n="svc4_p">Un equipo de profesionales cualificados hace realidad el proyecto de nuestros decoradores.</p>
       </div>
       <div class="service">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9.5 8.3A8.5 8.5 0 1 1 21 11.5ZM8 11l3 3 5-5"/></svg>
-        <h3 data-i18n="svc5_t"></h3><p data-i18n="svc5_p"></p>
+        <h3 data-i18n="svc5_t">Servicio postventa</h3><p data-i18n="svc5_p">Una atención esmerada para mantener su confianza y que nos recomiende a familiares y amigos.</p>
       </div>
       <div class="service">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6Z"/></svg>
-        <h3 data-i18n="svc6_t"></h3><p data-i18n="svc6_p"></p>
+        <h3 data-i18n="svc6_t">Garantía mínima de 2 años</h3><p data-i18n="svc6_p">Todos nuestros productos están garantizados, para su total tranquilidad.</p>
       </div>
     </div>
   </div>
@@ -235,8 +276,8 @@ footer .social a:hover{color:var(--brass-light)}
   <div class="container section">
     <div class="num">+50</div>
     <div>
-      <p class="her-rebrand" data-i18n="her_rebrand"></p>
-      <p data-i18n="her_p"></p>
+      <p class="her-rebrand" data-i18n="her_rebrand">Una nueva generación, la misma casa: Yuste Ruíz Mobiliario continúa el legado de Muebles Yuste.</p>
+      <p data-i18n="her_p">Más de medio siglo asesorando a las familias de Tarragona. Tres generaciones de clientes que vuelven porque saben que aquí se compra sin miedo a equivocarse.</p>
     </div>
   </div>
 </section>
@@ -244,20 +285,32 @@ footer .social a:hover{color:var(--brass-light)}
 <section class="section collection" id="coleccion">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow" data-i18n="col_eyebrow"></div>
-      <h2 data-i18n="col_title"></h2>
-      <p data-i18n="col_sub"></p>
+      <div class="eyebrow" data-i18n="col_eyebrow">Colección</div>
+      <h2 data-i18n="col_title">Un mueble para cada rincón</h2>
+      <p data-i18n="col_sub">Dormitorios, comedores, sofás, colchones y mucho más. Visite la tienda para descubrir la colección completa.</p>
     </div>
-    <div class="cat-grid" id="catGrid"><!-- categories injected by JS --></div>
+    <div class="cat-grid" id="catGrid">
+      <!-- static fallback for no-JS/crawlers; renderCats() replaces this with live photos on load -->
+      <a class="cat" href="#contacto"><div class="cat-img"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M3 11V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4M3 11a2 2 0 0 0-2 2v5h2m0-7h18m2 2a2 2 0 0 0-2-2m2 2v5h-2m-18 0v2m18-2v2m-18-2h18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="pending">Foto pendiente</span></div><h3>Dormitorio</h3></a>
+      <a class="cat" href="#contacto"><div class="cat-img"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M4 3h16v7H4zM6 10v11M18 10v11M6 15h12" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="pending">Foto pendiente</span></div><h3>Dormitorio juvenil</h3></a>
+      <a class="cat" href="#contacto"><div class="cat-img"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M3 9h18M5 9V5h14v4M7 9v12M17 9v12M7 14h10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="pending">Foto pendiente</span></div><h3>Comedor</h3></a>
+      <a class="cat" href="#contacto"><div class="cat-img"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M6 19V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14M4 19h16M9 7h6M9 11h6M9 15h6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="pending">Foto pendiente</span></div><h3>Mesas y sillas</h3></a>
+      <a class="cat" href="#contacto"><div class="cat-img"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M3 11V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4M3 11a2 2 0 0 0-2 2v5h2m0-7h18m2 2a2 2 0 0 0-2-2m2 2v5h-2m-18 0v2m18-2v2m-18-2h18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="pending">Foto pendiente</span></div><h3>Sofás</h3></a>
+      <a class="cat" href="#contacto"><div class="cat-img"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M4 3h16v7H4zM6 10v11M18 10v11M6 15h12" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="pending">Foto pendiente</span></div><h3>Recibidor</h3></a>
+      <a class="cat" href="#contacto"><div class="cat-img"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M3 9h18M5 9V5h14v4M7 9v12M17 9v12M7 14h10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="pending">Foto pendiente</span></div><h3>Vestidores</h3></a>
+      <a class="cat" href="#contacto"><div class="cat-img"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M6 19V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14M4 19h16M9 7h6M9 11h6M9 15h6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="pending">Foto pendiente</span></div><h3>Estudio y despacho</h3></a>
+      <a class="cat" href="#contacto"><div class="cat-img"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M3 11V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4M3 11a2 2 0 0 0-2 2v5h2m0-7h18m2 2a2 2 0 0 0-2-2m2 2v5h-2m-18 0v2m18-2v2m-18-2h18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="pending">Foto pendiente</span></div><h3>Colchones</h3></a>
+      <a class="cat" href="#contacto"><div class="cat-img"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M4 3h16v7H4zM6 10v11M18 10v11M6 15h12" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="pending">Foto pendiente</span></div><h3>Bases y canapés</h3></a>
+    </div>
   </div>
 </section>
 
 <section class="section manufacturers" id="fabricantes">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow" data-i18n="man_eyebrow"></div>
-      <h2 data-i18n="man_title"></h2>
-      <p data-i18n="man_sub"></p>
+      <div class="eyebrow" data-i18n="man_eyebrow">Fabricantes</div>
+      <h2 data-i18n="man_title">Nuestros fabricantes</h2>
+      <p data-i18n="man_sub">Trabajamos con una extensa red de fabricantes nacionales. Consulte sus catálogos completos.</p>
     </div>
     <div class="manufacturers-grid">
       <div class="manufacturer">
@@ -347,9 +400,9 @@ footer .social a:hover{color:var(--brass-light)}
 <section class="section" id="contacto">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow" data-i18n="con_eyebrow"></div>
-      <h2 data-i18n="con_title"></h2>
-      <p data-i18n="con_sub"></p>
+      <div class="eyebrow" data-i18n="con_eyebrow">Contacto</div>
+      <h2 data-i18n="con_title">Venga a vernos</h2>
+      <p data-i18n="con_sub">Estaremos encantados de atenderle en la tienda, por teléfono o por correo.</p>
     </div>
     <div class="contact-grid">
       <ul class="contact-list">
@@ -378,7 +431,7 @@ footer .social a:hover{color:var(--brass-light)}
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          <div><strong data-i18n="con_hours"></strong><br><span data-i18n-html="con_hours_v"></span></div>
+          <div><strong data-i18n="con_hours">Horario</strong><br><span data-i18n-html="con_hours_v">Lun–Vie: 8:30–13:00 y 16:00–20:00<br>Sáb: 10:00–13:00</span></div>
         </li>
       </ul>
     </div>
