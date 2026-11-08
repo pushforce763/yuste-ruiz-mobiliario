@@ -543,6 +543,10 @@ fetch('fotos.json')
   .then(m => { manifest = m || {}; renderCats(); })
   .catch(() => renderCats()); /* opening the file locally (file://) falls back to placeholders */
 
+function photoVariant(slug, filename, variant){
+  return 'fotos/' + slug + '/' + variant + '/' + encodeURIComponent(filename.replace(/\.[^.]+$/, '.webp'));
+}
+
 function renderCats(){
   const grid = document.getElementById('catGrid');
   grid.innerHTML = '';
@@ -557,7 +561,7 @@ function renderCats(){
       card.type = 'button';
       card.addEventListener('click', () => openLb(i));
       imgHtml =
-        '<img src="fotos/' + slug + '/' + encodeURIComponent(photos[0]) + '" alt="' + name + '" loading="lazy">' +
+        '<img src="' + photoVariant(slug, photos[0], 'thumb') + '" alt="' + name + '" loading="lazy">' +
         '<span class="cat-count">' + photos.length + ' &#128247;</span>';
     } else {
       card.href = '#contacto';
@@ -595,7 +599,7 @@ function updateLb(){
   const slug = catSlugs[lbCat];
   const photos = manifest[slug] || [];
   const name = i18n[lang].cats[lbCat];
-  document.getElementById('lbImg').src = 'fotos/' + slug + '/' + encodeURIComponent(photos[lbIdx]);
+  document.getElementById('lbImg').src = photoVariant(slug, photos[lbIdx], 'full');
   document.getElementById('lbImg').alt = name;
   document.getElementById('lbTitle').textContent = name;
   document.getElementById('lbCount').textContent = (lbIdx + 1) + ' / ' + photos.length;

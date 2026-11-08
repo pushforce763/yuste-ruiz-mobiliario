@@ -23,10 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generar fotos.json
+      - name: Instalar Pillow
+        run: pip install --quiet --disable-pip-version-check Pillow
+
+      - name: Generar miniaturas y fotos.json
         run: |
           python3 - <<'EOF'
           import json, os, re
+          from PIL import Image, ImageOps
 
           BASE = 'fotos'
           EXTS = {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif'}
@@ -36,24 +40,46 @@ jobs:
               return [int(t) if t.isdigit() else t.lower()
                       for t in re.split(r'(\d+)', s)]
 
+          def make_variant(src_path, dest_path, max_width, quality):
+              # Skip if already generated; originals never change in place.
+              if os.path.exists(dest_path):
+                  return
+              os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+              with Image.open(src_path) as im:
+                  im = ImageOps.exif_transpose(im)
+                  if im.mode == 'P':
+                      im = im.convert('RGBA')
+                  elif im.mode == 'CMYK':
+                      im = im.convert('RGB')
+                  w, h = im.size
+                  if w > max_width:
+                      im = im.resize((max_width, round(h * max_width / w)), Image.LANCZOS)
+                  im.save(dest_path, 'WEBP', quality=quality)
+
           manifest = {}
           for d in sorted(os.listdir(BASE)):
               path = os.path.join(BASE, d)
-              if os.path.isdir(path):
-                  files = [f for f in os.listdir(path)
-                           if os.path.splitext(f.lower())[1] in EXTS]
-                  manifest[d] = sorted(files, key=natural_key)
+              if not os.path.isdir(path):
+                  continue
+              files = [f for f in os.listdir(path)
+                       if os.path.splitext(f.lower())[1] in EXTS]
+              manifest[d] = sorted(files, key=natural_key)
+              for f in files:
+                  name = os.path.splitext(f)[0]
+                  src = os.path.join(path, f)
+                  make_variant(src, os.path.join(path, 'thumb', name + '.webp'), 600, 75)
+                  make_variant(src, os.path.join(path, 'full', name + '.webp'), 1400, 80)
 
           with open('fotos.json', 'w', encoding='utf-8') as fh:
               json.dump(manifest, fh, ensure_ascii=False, indent=2)
           EOF
 
-      - name: Commit fotos.json si hay cambios
+      - name: Commit fotos.json y miniaturas si hay cambios
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add fotos.json
-          git diff --cached --quiet || git commit -m "chore: actualizar fotos.json"
+          git add fotos.json fotos/*/thumb fotos/*/full
+          git diff --cached --quiet || git commit -m "chore: actualizar fotos.json y miniaturas"
           git push
 
       - uses: actions/configure-pages@v5
