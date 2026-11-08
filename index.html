@@ -117,7 +117,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(244,241,233,.92);backdro
 .heritage .her-rebrand{font-family:var(--display);font-size:1.3rem;color:var(--brass-light);margin-bottom:12px}
 
 /* ---------- contact ---------- */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:48px}
 .contact-list{list-style:none;display:grid;gap:18px;margin-top:8px}
 .contact-list li{display:flex;gap:14px;align-items:flex-start}
 .contact-list svg{width:22px;height:22px;color:var(--brass);flex-shrink:0;margin-top:3px}
@@ -135,7 +135,6 @@ footer .social a:hover{color:var(--brass-light)}
   .nav-links{position:fixed;inset:68px 0 auto 0;background:var(--paper);flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid var(--line);display:none}
   .nav-links.open{display:flex}
   .burger{display:block}
-  .contact-grid{grid-template-columns:1fr}
   .heritage .container{grid-template-columns:1fr;gap:16px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -355,6 +354,12 @@ footer .social a:hover{color:var(--brass-light)}
     <div class="contact-grid">
       <ul class="contact-list">
         <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><strong data-i18n="con_addr">Dirección</strong><br>
+            {{TODO: dirección, CP, localidad}}<br>
+            <a href="https://www.google.com/maps/search/?api=1&query={{TODO: dirección codificada}}" target="_blank" rel="noopener" data-i18n="con_route">Cómo llegar</a></div>
+        </li>
+        <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2.05Z"/></svg>
           <div><strong data-i18n="con_phone">Teléfono</strong><br>
             <a href="tel:+34977546677">977 54 66 77</a> · <a href="tel:+34625033718">625 03 37 18</a></div>
@@ -382,7 +387,7 @@ footer .social a:hover{color:var(--brass-light)}
 
 <footer>
   <div class="container">
-    <div>© <span id="year"></span> Yuste Ruíz Mobiliario · Tarragona · <span data-i18n="foot"></span></div>
+    <div>© <span id="year"></span> Yuste Ruíz Mobiliario · Tarragona · <span data-i18n="foot">Muebles, colchones y sofás desde 1976</span> · <a href="aviso-legal.html" data-i18n="foot_legal">Aviso legal</a></div>
     <div class="social">
       <a href="https://www.instagram.com/yuste_ruiz_mobiliario/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://wa.me/34625033718" target="_blank" rel="noopener">WhatsApp</a>
@@ -424,7 +429,7 @@ const i18n = {
     con_sub:"Estaremos encantados de atenderle en la tienda, por teléfono o por correo.",
     con_phone:"Teléfono", con_addr:"Dirección", con_hours:"Horario", con_route:"Cómo llegar",
     con_hours_v:"Lun–Vie: 8:30–13:00 y 16:00–20:00<br>Sáb: 10:00–13:00",
-    foot:"Muebles, colchones y sofás desde 1976",
+    foot:"Muebles, colchones y sofás desde 1976", foot_legal:"Aviso legal",
     cats:["Dormitorio","Dormitorio juvenil","Comedor","Mesas y sillas","Sofás","Recibidor","Vestidores","Estudio y despacho","Colchones","Bases y canapés"],
     pending:"Foto pendiente",
     man_eyebrow:"Fabricantes", man_title:"Nuestros fabricantes", man_sub:"Trabajamos con una extensa red de fabricantes nacionales. Consulte sus catálogos completos.",
@@ -451,7 +456,7 @@ const i18n = {
     con_sub:"Estarem encantats d'atendre-us a la botiga, per telèfon o per correu.",
     con_phone:"Telèfon", con_addr:"Adreça", con_hours:"Horari", con_route:"Com arribar-hi",
     con_hours_v:"Dl–Dv: 8:30–13:00 i 16:00–20:00<br>Ds: 10:00–13:00",
-    foot:"Mobles, matalassos i sofàs des de 1976",
+    foot:"Mobles, matalassos i sofàs des de 1976", foot_legal:"Avís legal",
     cats:["Dormitori","Dormitori juvenil","Menjador","Taules i cadires","Sofàs","Rebedor","Vestidors","Estudi i despatx","Matalassos","Bases i canapès"],
     pending:"Foto pendent",
     man_eyebrow:"Fabricants", man_title:"Els nostres fabricants", man_sub:"Treballem amb una extensa xarxa de fabricants nacionals. Consulteu els seus catàlegs complets.",
